@@ -4,3 +4,12 @@
 body {
 	font-family: 'Roboto Condensed', sans-serif;
 	}
+	
+.linkImg{
+	padding: 15px;
+}
+
+#linkButton{
+  margin: 0px, 30px, 0px, 100px;
+}
+  
