@@ -1,4 +1,4 @@
-CREATE TABLE paikka (
+CREATE TABLE Paikka (
 	paikka_id INT NOT NULL,
 	hloMaara INT NOT NULL,
 	lisatiedot VARCHAR(255),
@@ -6,7 +6,7 @@ CREATE TABLE paikka (
 	);
 	
 
-CREATE TABLE opettaja (
+CREATE TABLE Opettaja (
 	ope_id INT NOT NULL AUTO_INCREMENT,
 	etunimi VARCHAR(100) NOT NULL,
 	sukunimi VARCHAR(100) NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE opettaja (
 	);
 
 
-CREATE TABLE kouluttaja (
+CREATE TABLE Kouluttaja (
 	kouluttaja_id INT NOT NULL AUTO_INCREMENT,
 	etunimi VARCHAR(100) NOT NULL,
 	sukunimi VARCHAR(100) NOT NULL,
@@ -26,9 +26,8 @@ CREATE TABLE kouluttaja (
 	lisatiedot VARCHAR(255),
 	PRIMARY KEY(kouluttaja_id)
 	);
-
-
-CREATE TABLE koulutus (
+	
+CREATE TABLE Koulutus (
 	koulutus_id INT NOT NULL AUTO_INCREMENT,
 	pvm DATE NOT NULL,
 	alkamisaika TIME NOT NULL,
@@ -38,15 +37,15 @@ CREATE TABLE koulutus (
 	kuvaus VARCHAR(255),
 	opettaja INT NOT NULL,
 	PRIMARY KEY(koulutus_id),
-	FOREIGN KEY paikka REFERENCES paikka(paikka_id),
-	FOREIGN KEY opettaja REFERENCES opettaja(ope_id)
+	CONSTRAINT FOREIGN KEY(paikka) REFERENCES Paikka(paikka_id) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT FOREIGN KEY(opettaja) REFERENCES Opettaja(ope_id) ON DELETE CASCADE ON UPDATE CASCADE
 	);
 	
-
-CREATE TABLE koulutuksen_kouluttajat (
+	
+CREATE TABLE Koulutuksen_kouluttajat (
 	koulutus_id INT NOT NULL,
-	kouluttaja_id INT NOT NULL
-	PRIMARY KEY(koulutus_id, kouluttaja_id)
-	FOREIGN KEY koulutus_id REFERENCES koulutus(koulutus_id),
-	FOREIGN KEY kouluttaja_id REFERENCES kouluttaja(kouluttaja_id)
+	kouluttaja_id INT NOT NULL,
+	PRIMARY KEY(koulutus_id, kouluttaja_id),
+	CONSTRAINT FOREIGN KEY(koulutus_id) REFERENCES Koulutus(koulutus_id) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT FOREIGN KEY(kouluttaja_id) REFERENCES Kouluttaja(kouluttaja_id) ON DELETE CASCADE ON UPDATE CASCADE
 	);
