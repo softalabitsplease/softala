@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 
 
@@ -127,22 +128,16 @@
 					<td>Matti Laakso</td>
 					<td>Tämmöinen Java kurssi...</td>
 				</tr>
-				<tr>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-				</tr>
-				<tr>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-				</tr>
+				<c:forEach items="${koulutukset}" var="koulutus">
+					<tr>
+						<td><c:out value="${koulutukset.aihe}"/></td>
+						<td><c:out value="${koulutukset.alkamisaika}"/></td>
+						<td><c:out value="${koulutukset.paikka}"/></td>
+						<!--  <td><c:out value="${koulutukset.kouluttaja}"/></td> -->
+						<td><c:out value="${koulutukset.opettaja}"/></td>
+						<td><c:out value="${koulutukset.kuvaus}"/></td>
+					</tr>
+				</c:forEach>
 			</tbody>
 		</table>
 
