@@ -133,7 +133,7 @@
 						<td><c:out value="${koulutukset.aihe}"/></td>
 						<td><c:out value="${koulutukset.alkamisaika}"/></td>
 						<td><c:out value="${koulutukset.paikka}"/></td>
-						<!--  <td><c:out value="${koulutukset.kouluttaja}"/></td> -->
+						<!--  <td><c:out value="${koulutukset.kouluttaja}"/></td>  -->
 						<td><c:out value="${koulutukset.opettaja}"/></td>
 						<td><c:out value="${koulutukset.kuvaus}"/></td>
 					</tr>
