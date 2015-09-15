@@ -1,24 +1,24 @@
-INSERT INTO paikka
+INSERT INTO Paikka
 (paikka_id, hloMaara, lisatiedot)
 VALUES
 (5009, 999, 'taulutussit korvattu simpukoilla');
 
-INSERT INTO opettaja
+INSERT INTO Opettaja
 (etunimi, sukunimi, puhNro, email, lisatiedot)
 VALUES
 ('Katka', 'Rapunen', 0401337101, 'katka.rapunen@pitkaleka.com', 'Palkka maksetaan katkarapuina');
 
-INSERT INTO kouluttaja
+INSERT INTO Kouluttaja
 (etunimi, sukunimi, puhNro, email, lisatiedot)
 VALUES
 ('Tuhka', 'Tomaattikastike', 050101337, 'tuhka.tomaattikastike@makaroni.com', 'Kouluttajan kohtalo on muuttua kastikkeeksi');
 
-INSERT INTO koulutus
+INSERT INTO Koulutus
 (pvm, alkamisaika, paattymisaika, paikka, aihe, kuvaus, opettaja)
 VALUES
 ('2015-09-08', '13:37', '13:38', 5009, 'Katkarapujen koulutus', 'Luento kertoo syvällisesti katkarapujen sielunelämästä', 1);
 
-INSERT INTO koulutuksen_kouluttajat
+INSERT INTO Koulutuksen_kouluttajat
 (koulutus_id, kouluttaja_id)
 VALUES
 (1, 2);

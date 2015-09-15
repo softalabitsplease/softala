@@ -2,7 +2,11 @@ package tietokanta;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 
 /**
@@ -22,7 +26,7 @@ public class Yhteys {
      */
     public void yhdista() {
         // Syntaksi: jdbc:TYPE:machine:port/DB_NAME
-        String url = "jdbc:mysql://localhost:3306/a1400204";
+        String url = "jdbc:mysql://localhost:3306/a1400153";
 
         // ladataan tietokanta-ajuri
         try {
@@ -36,7 +40,7 @@ public class Yhteys {
             // Otetaan yhteys tietokantaan
             yhteys =
                 DriverManager.getConnection(
-                    url, "a1400204", "kyDYTb53c");
+                    url, "a1400153", "naPYH724w");
         } catch (SQLException ex) {
             kasitteleVirhe(
                 "Virhe tietokantayhteyden avaamisessa", ex);
@@ -54,6 +58,36 @@ public class Yhteys {
                 "Virhe tietokantayhteyden sulkemisessa", ex);
         }
     }
+    
+    public int suoritaSqlLauseParametreilla(String sqlLause,
+			ArrayList<String> parametrit) {
+		int tulokset = 0;
+		int koulutus_id = 0;
+		System.out.println("Paivitys.suoritaSqlLauseParametreilla()");
+		System.out.println("JUKKA: " + sqlLause);
+
+		try {
+			System.out.println("sequel");
+			PreparedStatement valmisteltuLause = yhteys
+					.prepareStatement(sqlLause,Statement.RETURN_GENERATED_KEYS);
+			System.out.println("prequel");
+			for (int i = 0; i < parametrit.size(); i++) {
+				valmisteltuLause.setObject(i + 1, parametrit.get(i));
+			}
+
+			System.out.println(valmisteltuLause);
+			
+			tulokset = valmisteltuLause.executeUpdate();
+			ResultSet rs = valmisteltuLause.getGeneratedKeys();
+			if (rs != null && rs.next()) {
+			     koulutus_id = rs.getInt(1);
+			     System.out.println();
+			}
+		} catch (SQLException ex) {
+			Yhteys.kasitteleVirhe("Virhe kyselyn suorittamisessa.", ex);
+		}
+		return koulutus_id;
+	}
 
     public Connection getYhteys() {
         if (yhteys == null) {

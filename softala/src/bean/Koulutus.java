@@ -14,6 +14,7 @@ public class Koulutus {
 	private int opettaja;
 	
 	
+	
 	public Koulutus() {
 		super();
 		// TODO Auto-generated constructor stub

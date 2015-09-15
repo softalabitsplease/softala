@@ -16,11 +16,13 @@
 			<th>Aihe</th>
 			<th>Paikka</th>
 		</tr>
+		<c:forEach items="${koulutukset}" var="koulu">
 		<tr>
-			<td><c:out value="" /></td>
+			<td><c:out value="${koulu.aihe}" /></td>
 			<td><c:out value="" /></td>
 			<td <c:out value=""/>></td>
 		</tr>
+		</c:forEach>
 	</table>
 </body>
 </html>

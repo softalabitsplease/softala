@@ -48,7 +48,7 @@ public class KoulutusServlet extends HttpServlet {
 		request.setAttribute("koulutukset", koulutukset);
 
 		// jsp hoitaa muotoilun
-		request.getRequestDispatcher("tulostus.jsp").forward(request, response);
+		request.getRequestDispatcher("tulosta.jsp").forward(request, response);
 
 	}
 
