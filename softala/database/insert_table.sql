@@ -86,4 +86,12 @@ VALUES
 INSERT INTO Koulutuksen_kouluttajat
 (koulutus_id, kouluttaja_id)
 VALUES
-(1, 2);
+(1, 1);
+
+INSERT INTO Koulutuksen_kouluttajat
+(koulutus_id, kouluttaja_id)
+VALUES
+(2, 1);
+
+
+

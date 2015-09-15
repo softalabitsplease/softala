@@ -128,12 +128,12 @@
 					<td>Matti Laakso</td>
 					<td>Tämmöinen Java kurssi...</td>
 				</tr>
-				<c:forEach items="${koulutukset}" var="koulutus">
+				<c:forEach items="${koulutukset}" var="koulutukset">
 					<tr>
 						<td><c:out value="${koulutukset.aihe}"/></td>
 						<td><c:out value="${koulutukset.alkamisaika}"/></td>
 						<td><c:out value="${koulutukset.paikka}"/></td>
-						<!--  <td><c:out value="${koulutukset.kouluttaja}"/></td>  -->
+						<td>KOULUTTAJA </td>
 						<td><c:out value="${koulutukset.opettaja}"/></td>
 						<td><c:out value="${koulutukset.kuvaus}"/></td>
 					</tr>
