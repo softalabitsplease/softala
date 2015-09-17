@@ -4,16 +4,15 @@ CREATE TABLE Paikka (
 	lisatiedot VARCHAR(255),
 	PRIMARY KEY(paikka_id)
 	);
-	
 
 CREATE TABLE Opettaja (
-	ope_id INT NOT NULL AUTO_INCREMENT,
+	opettaja_id INT NOT NULL AUTO_INCREMENT,
 	etunimi VARCHAR(100) NOT NULL,
 	sukunimi VARCHAR(100) NOT NULL,
 	puhNro INT NOT NULL,
 	email VARCHAR(255) NOT NULL,
 	lisatiedot VARCHAR(255),
-	PRIMARY KEY(ope_id)
+	PRIMARY KEY(opettaja_id)
 	);
 
 
@@ -32,13 +31,13 @@ CREATE TABLE Koulutus (
 	pvm DATE NOT NULL,
 	alkamisaika TIME NOT NULL,
 	paattymisaika TIME NOT NULL,
-	paikka INT NOT NULL,
+	paikka_id INT NOT NULL,
 	aihe VARCHAR(50) NOT NULL,
 	kuvaus VARCHAR(255),
-	opettaja INT NOT NULL,
+	opettaja_id INT NOT NULL,
 	PRIMARY KEY(koulutus_id),
-	CONSTRAINT FOREIGN KEY(paikka) REFERENCES Paikka(paikka_id) ON DELETE CASCADE ON UPDATE CASCADE,
-	CONSTRAINT FOREIGN KEY(opettaja) REFERENCES Opettaja(ope_id) ON DELETE CASCADE ON UPDATE CASCADE
+	CONSTRAINT FOREIGN KEY(paikka_id) REFERENCES Paikka(paikka_id) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT FOREIGN KEY(opettaja_id) REFERENCES Opettaja(opettaja_id) ON DELETE CASCADE ON UPDATE CASCADE
 	);
 	
 	
