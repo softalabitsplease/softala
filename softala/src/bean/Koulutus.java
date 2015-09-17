@@ -8,10 +8,10 @@ public class Koulutus {
 	private String pvm;
 	private String alkamisaika;
 	private String paattymisaika;
-	private int paikka;
+	private int paikka_id;
 	private String aihe;
 	private String kuvaus;
-	private int opettaja;
+	private int opettaja_id;
 	
 	
 	
@@ -22,26 +22,27 @@ public class Koulutus {
 
 
 	public Koulutus(int koulutus_id, String pvm, String alkamisaika,
-			String paattymisaika, int paikka, String aihe, String kuvaus,
-			int opettaja) {
+			String paattymisaika, int paikka_id, String aihe, String kuvaus,
+			int opettaja_id) {
 		super();
 		this.koulutus_id = koulutus_id;
 		this.pvm = pvm;
 		this.alkamisaika = alkamisaika;
 		this.paattymisaika = paattymisaika;
-		this.paikka = paikka;
+		this.paikka_id = paikka_id;
 		this.aihe = aihe;
 		this.kuvaus = kuvaus;
-		this.opettaja = opettaja;
+		this.opettaja_id = opettaja_id;
 	}
 
-	public Koulutus(String alkamisaika, String paattymisaika, int paikka,
-			String aihe) {
+	public Koulutus(String alkamisaika, String paattymisaika, int paikka_id,
+			String aihe, int opettaja_id) {
 		super();
 		this.alkamisaika = alkamisaika;
 		this.paattymisaika = paattymisaika;
-		this.paikka = paikka;
+		this.paikka_id = paikka_id;
 		this.aihe = aihe;
+		this.opettaja_id = opettaja_id;
 	}
 
 
@@ -86,12 +87,12 @@ public class Koulutus {
 
 
 	public int getPaikka() {
-		return paikka;
+		return paikka_id;
 	}
 
 
-	public void setPaikka(int paikka) {
-		this.paikka = paikka;
+	public void setPaikka(int paikka_id) {
+		this.paikka_id = paikka_id;
 	}
 
 
@@ -116,12 +117,12 @@ public class Koulutus {
 
 
 	public int getOpettaja() {
-		return opettaja;
+		return opettaja_id;
 	}
 
 
-	public void setOpettaja(int opettaja) {
-		this.opettaja = opettaja;
+	public void setOpettaja(int opettaja_id) {
+		this.opettaja_id = opettaja_id;
 	}
 
 
@@ -129,8 +130,8 @@ public class Koulutus {
 	public String toString() {
 		return "Koulutus [koulutus_id=" + koulutus_id + ", pvm=" + pvm
 				+ ", alkamisaika=" + alkamisaika + ", paattymisaika="
-				+ paattymisaika + ", paikka=" + paikka + ", aihe=" + aihe
-				+ ", kuvaus=" + kuvaus + ", opettaja=" + opettaja + "]";
+				+ paattymisaika + ", paikka_id=" + paikka_id + ", aihe=" + aihe
+				+ ", kuvaus=" + kuvaus + ", opettaja=" + opettaja_id + "]";
 	}
 	
 	

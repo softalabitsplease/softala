@@ -12,10 +12,18 @@ public class KoulutusLisaysDAO {
 
 	public void avaaYhteys() {
 		// LUODAAN YHTEYS OLIO, JOKA LUO AUTOMAATTISESTI YHTEYDEN
-
-		yhteys.yhdista();
+		yhteys.getYhteys();
+		
 		System.out.println("Yhteys avattu.");
 
+	}
+	
+	public Yhteys getYhteys() {
+		return yhteys;
+	}
+
+	public void setYhteys(Yhteys yhteys) {
+		this.yhteys = yhteys;
 	}
 
 	public void suljeYhteys() {
@@ -25,26 +33,24 @@ public class KoulutusLisaysDAO {
 		System.out.println("Yhteys suljettu.");
 	}
 	
-	public void LisaaKoulutus (Koulutus koulutus){
+	public void LisaaKoulutus (Koulutus koul){
 		try {
-			String sql = "insert into Koulutus (alkamisaika,pvm,aihe,paikka) values (?,?,?,?)";
+			String sql = "insert into Koulutus (alkamisaika,paattymisaika,paikka_id,aihe,opettaja_id) values (?,?,?,?,?)";
 			Yhteys yhteys = new Yhteys();
 			yhteys.getYhteys();
 
 			ArrayList uusiKoulutus = new ArrayList();
-			uusiKoulutus.add(koulutus.getAlkamisaika());
-			uusiKoulutus.add(koulutus.getPvm());
-			uusiKoulutus.add(koulutus.getAihe());
-			uusiKoulutus.add(koulutus.getPaikka());
+			uusiKoulutus.add(koul.getAlkamisaika());
+			uusiKoulutus.add(koul.getPaattymisaika());
+			uusiKoulutus.add(koul.getPaikka());
+			uusiKoulutus.add(koul.getAihe());
+			uusiKoulutus.add(koul.getOpettaja());
 
 			yhteys.suoritaSqlLauseParametreilla(sql, uusiKoulutus);
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println("VIRHE TIEDON LISÄYKSESSÄ");
-		} finally {
-			suljeYhteys();
 		}
-
 	}
 
 }

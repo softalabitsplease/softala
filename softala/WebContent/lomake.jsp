@@ -36,15 +36,15 @@
 			<br>
 			<tr>
 				<td>Paikka</td>
-				<td><input type="text" name="paikka"
+				<td><input type="text" name="paikka_id"
 					placeholder="Syötä koulutuksen paikka" /></td>
 			</tr>
 			<br>
-			<!--  <tr>
+			<tr>
 				<td>Opettaja</td>
-				<td><input type="text" name="opettaja"
+				<td><input type="text" name="opettaja_id"
 					placeholder="Syötä koulutuksen opettaja" /></td>
-			</tr>-->
+			</tr>
 			<br>
 			<!--   <tr>
 				<td>Kuvaus</td>

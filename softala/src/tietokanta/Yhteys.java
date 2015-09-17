@@ -45,6 +45,7 @@ public class Yhteys {
             kasitteleVirhe(
                 "Virhe tietokantayhteyden avaamisessa", ex);
         }
+
     }
 
     /**

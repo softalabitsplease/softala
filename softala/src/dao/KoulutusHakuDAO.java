@@ -29,7 +29,7 @@ public class KoulutusHakuDAO {
 
 	public ArrayList<Koulutus> haeKoulutukset() {
 		Kysely kysely = new Kysely(yhteys.getYhteys());
-		kysely.suoritaYksittainenKysely("SELECT * FROM Koulutuksen_kouluttajat ko JOIN Koulutus k ON ko.Koulutus_id = k.Koulutus_id JOIN Kouluttaja kou ON ko.Kouluttaja_id = kou.Kouluttaja_id");
+		kysely.suoritaYksittainenKysely("SELECT * FROM Koulutuksen_kouluttaja ko JOIN Koulutus k ON ko.koulutus_id = k.koulutus_id JOIN Kouluttaja kou ON ko.kouluttaja_id = kou.kouluttaja_id JOIN Opettaja op ON k.opettaja_id = op.opettaja_id;");
 		ArrayList tulokset = kysely.getTulosjoukko();
 		ArrayList<Koulutus> koulutukset = new ArrayList<Koulutus>();
 		for (int i = 0; i < tulokset.size(); i++) {
@@ -41,14 +41,14 @@ public class KoulutusHakuDAO {
 			System.out.println(pvm);
 			String alkamisaika = (String) rivi.get("alkamisaika");
 			String paattymisaika = (String) rivi.get("paattymisaika");
-			int paikka = Integer.parseInt((String) rivi.get("paikka"));
+			int paikka_id = Integer.parseInt((String) rivi.get("paikka_id"));
 			String aihe = (String) rivi.get("aihe");
 			System.out.println(aihe);
 			String kuvaus = (String) rivi.get("kuvaus");
-			int opettaja = Integer.parseInt((String) rivi.get("opettaja"));
-			System.out.println(opettaja);
+			int opettaja_id = Integer.parseInt((String) rivi.get("opettaja_id"));
+			System.out.println(opettaja_id);
 			Koulutus koulutus = new Koulutus(koulutus_id, pvm, alkamisaika,
-					paattymisaika, paikka, aihe, kuvaus, opettaja);
+					paattymisaika, paikka_id, aihe, kuvaus, opettaja_id);
 			koulutukset.add(koulutus);
 		}
 		return koulutukset;

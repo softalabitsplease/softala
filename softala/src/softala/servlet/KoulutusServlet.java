@@ -62,21 +62,29 @@ public class KoulutusServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String alkamisaika = request.getParameter("alkamisaika");
 		String paattymisaika = request.getParameter("paattymisaika");
-		String apupaikka = request.getParameter("paikka");
-		int paikka = Integer.parseInt(apupaikka);
+		String paikka_id = request.getParameter("paikka_id");
 		String aihe = request.getParameter("aihe");
+		String apuopettaja = request.getParameter("opettaja_id");
+		System.out.println(aihe+alkamisaika+paattymisaika+paikka_id+apuopettaja);
+		KoulutusLisaysDAO kDao = new KoulutusLisaysDAO();
 		
 		try {
-			Koulutus koul = new Koulutus(alkamisaika, paattymisaika, paikka, aihe);
-			KoulutusLisaysDAO kDao = new KoulutusLisaysDAO();
-			kDao.LisaaKoulutus(koul);
 			
+				int paikka_id2 = Integer.parseInt(paikka_id);
+				int opettaja_id = Integer.parseInt(apuopettaja);
+				kDao.avaaYhteys();
+				Koulutus koul = new Koulutus(alkamisaika, paattymisaika, paikka_id2, aihe, opettaja_id);
+				
+				kDao.LisaaKoulutus(koul);
+			
+		} finally {
+			kDao.suljeYhteys();
 		}
-	catch (Exception e) {
+	/*catch (Exception e) {
 		throw new ServletException(e);
-	}
+	}*/
 	
-	response.sendRedirect("henkilot");
+	response.sendRedirect("lomake");
 	}
 	
 
