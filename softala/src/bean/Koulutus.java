@@ -35,6 +35,15 @@ public class Koulutus {
 		this.opettaja = opettaja;
 	}
 
+	public Koulutus(String alkamisaika, String paattymisaika, int paikka,
+			String aihe) {
+		super();
+		this.alkamisaika = alkamisaika;
+		this.paattymisaika = paattymisaika;
+		this.paikka = paikka;
+		this.aihe = aihe;
+	}
+
 
 	public int getKoulutus_id() {
 		return koulutus_id;

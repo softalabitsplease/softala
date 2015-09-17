@@ -10,13 +10,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import bean.Koulutus;
 import dao.KoulutusHakuDAO;
+import dao.KoulutusLisaysDAO;
 
 import java.util.ArrayList;
 
 /**
  * Servlet implementation class KoulutusServlet
  */
-@WebServlet("/KoulutusServlet")
+@WebServlet("/koulutukset")
 public class KoulutusServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -59,6 +60,24 @@ public class KoulutusServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String alkamisaika = request.getParameter("alkamisaika");
+		String paattymisaika = request.getParameter("paattymisaika");
+		String apupaikka = request.getParameter("paikka");
+		int paikka = Integer.parseInt(apupaikka);
+		String aihe = request.getParameter("aihe");
+		
+		try {
+			Koulutus koul = new Koulutus(alkamisaika, paattymisaika, paikka, aihe);
+			KoulutusLisaysDAO kDao = new KoulutusLisaysDAO();
+			kDao.LisaaKoulutus(koul);
+			
+		}
+	catch (Exception e) {
+		throw new ServletException(e);
 	}
+	
+	response.sendRedirect("henkilot");
+	}
+	
 
 }

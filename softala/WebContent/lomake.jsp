@@ -8,13 +8,13 @@
 </head>
 <body>
 	<h1>Lis‰‰ koulutus</h1>
-	<form action="nayta_koulutus" method="get">
+	<form action="koulutukset" method="post">
 		<table>
-			<tr>
+			<!--<tr>
 				<td>Kouluttaja</td>
 				<td><input type="text" name="kouluttaja"
 					placeholder="Syˆt‰ kouluttajan nimi" /></td>
-			</tr>
+			</tr> -->
 			<br>
 			<tr>
 				<td>Aihe</td>
@@ -23,9 +23,15 @@
 			</tr>
 			<br>
 			<tr>
-				<td>Aika</td>
-				<td><input type="datetime" name="aika"
-					placeholder="Syˆt‰ koulutuksen aika" /></td>
+				<td>Alkamisaika</td>
+				<td><input type="datetime" name="alkamisaika"
+					placeholder="Syˆt‰ koulutuksen alkamisaika" /></td>
+			</tr>
+			<br>
+			<tr>
+				<td>P‰‰ttymisaika</td>
+				<td><input type="datetime" name="paattymisaika"
+					placeholder="Syˆt‰ koulutuksen p‰‰ttymisaika" /></td>
 			</tr>
 			<br>
 			<tr>
@@ -34,17 +40,17 @@
 					placeholder="Syˆt‰ koulutuksen paikka" /></td>
 			</tr>
 			<br>
-			<tr>
+			<!--  <tr>
 				<td>Opettaja</td>
 				<td><input type="text" name="opettaja"
 					placeholder="Syˆt‰ koulutuksen opettaja" /></td>
-			</tr>
+			</tr>-->
 			<br>
-			<tr>
+			<!--   <tr>
 				<td>Kuvaus</td>
 				<td><input type="text" name="kuvaus"
 					placeholder="Syˆt‰ koulutuksen kuvaus" /></td>
-			</tr>
+			</tr>-->
 			<br>
 			<tr>
 				<td><button type="submit">Lis‰‰</button></td>
