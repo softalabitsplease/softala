@@ -29,6 +29,7 @@ CREATE TABLE Kouluttaja (
 CREATE TABLE Koulutus (
 	koulutus_id INT NOT NULL AUTO_INCREMENT,
 	pvm DATE NOT NULL,
+	osallistuja_lkm INT,
 	alkamisaika TIME NOT NULL,
 	paattymisaika TIME NOT NULL,
 	paikka_id INT NOT NULL,
