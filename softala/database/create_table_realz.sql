@@ -42,7 +42,7 @@ CREATE TABLE Koulutus (
 	);
 	
 	
-CREATE TABLE Koulutuksen_kouluttajat (
+CREATE TABLE Koulutuksen_kouluttaja (
 	koulutus_id INT NOT NULL,
 	kouluttaja_id INT NOT NULL,
 	PRIMARY KEY(koulutus_id, kouluttaja_id),

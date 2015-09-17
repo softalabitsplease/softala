@@ -83,12 +83,12 @@ INSERT INTO Koulutus
 VALUES
 ('2016-02-14', '14:00', '18:00', 5001, 'Pussailun pitk‰ oppim‰‰r‰', 'Pussailun harjoittelua, ota mukaan oma parisi', 1);
 
-INSERT INTO Koulutuksen_kouluttajat
+INSERT INTO Koulutuksen_kouluttaja
 (koulutus_id, kouluttaja_id)
 VALUES
 (1, 1);
 
-INSERT INTO Koulutuksen_kouluttajat
+INSERT INTO Koulutuksen_kouluttaja
 (koulutus_id, kouluttaja_id)
 VALUES
 (2, 1);
