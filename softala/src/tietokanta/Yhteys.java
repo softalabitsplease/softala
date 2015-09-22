@@ -26,7 +26,7 @@ public class Yhteys {
      */
     public void yhdista() {
         // Syntaksi: jdbc:TYPE:machine:port/DB_NAME
-        String url = "jdbc:mysql://localhost:3306/a1400153";
+        String url = "jdbc:mysql://localhost:3306/projekti";
 
         // ladataan tietokanta-ajuri
         try {
@@ -40,7 +40,7 @@ public class Yhteys {
             // Otetaan yhteys tietokantaan
             yhteys =
                 DriverManager.getConnection(
-                    url, "a1400153", "naPYH724w");
+                    url, "projekti", "keFAiY25i");
         } catch (SQLException ex) {
             kasitteleVirhe(
                 "Virhe tietokantayhteyden avaamisessa", ex);
