@@ -7,7 +7,13 @@
 <title>Lis‰‰ koulutus</title>
 </head>
 <body>
+	
 	<h1>Lis‰‰ koulutus</h1>
+	<% String lisatty = request.getParameter("lisatty");
+	  if(lisatty != null && lisatty.equals("true")){
+	  %>
+	 	Koulutus lis‰tty!
+	  <%} %>
 	<form action="koulutukset" method="post">
 		<table>
 			<!--<tr>
@@ -19,31 +25,31 @@
 			<tr>
 				<td>Aihe</td>
 				<td><input type="text" name="aihe"
-					placeholder="Syˆt‰ koulutuksen aihe" /></td>
+					placeholder="Syˆt‰ koulutuksen aihe" required/></td>
 			</tr>
 			<br>
 			<tr>
 				<td>Alkamisaika</td>
 				<td><input type="datetime" name="alkamisaika"
-					placeholder="Syˆt‰ koulutuksen alkamisaika" /></td>
+					placeholder="Syˆt‰ koulutuksen alkamisaika" required /></td>
 			</tr>
 			<br>
 			<tr>
 				<td>P‰‰ttymisaika</td>
 				<td><input type="datetime" name="paattymisaika"
-					placeholder="Syˆt‰ koulutuksen p‰‰ttymisaika" /></td>
+					placeholder="Syˆt‰ koulutuksen p‰‰ttymisaika" required /></td>
 			</tr>
 			<br>
 			<tr>
 				<td>Paikka</td>
 				<td><input type="text" name="paikka_id"
-					placeholder="Syˆt‰ koulutuksen paikka" /></td>
+					placeholder="Syˆt‰ koulutuksen paikka" required/></td>
 			</tr>
 			<br>
 			<tr>
 				<td>Opettaja</td>
 				<td><input type="text" name="opettaja_id"
-					placeholder="Syˆt‰ koulutuksen opettaja" /></td>
+					placeholder="Syˆt‰ koulutuksen opettaja" required/></td>
 			</tr>
 			<br>
 			<!--   <tr>

@@ -87,7 +87,7 @@ public class KoulutusServlet extends HttpServlet {
 		 * catch (Exception e) { throw new ServletException(e); }
 		 */
 
-		response.sendRedirect("lomake.jsp");
+		response.sendRedirect("lomake.jsp?lisatty=true");
 	}
 
 }
