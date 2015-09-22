@@ -1,3 +1,7 @@
 Testitietokanta löytyy täältä proto292: 
 tunnus: projekti
 salasana: keFAiY25i
+
+/var/lib/tomcat8/webapps
+
+http://proto292:8080/softala/etusivu.html
