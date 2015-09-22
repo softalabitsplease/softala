@@ -12,6 +12,7 @@ public class Koulutus {
 	private String aihe;
 	private String kuvaus;
 	private int opettaja_id;
+	private String opettajanNimi;
 	
 	
 	
@@ -43,6 +44,22 @@ public class Koulutus {
 		this.paikka_id = paikka_id;
 		this.aihe = aihe;
 		this.opettaja_id = opettaja_id;
+	}
+
+
+	public Koulutus(int koulutus_id, String pvm, String alkamisaika,
+			String paattymisaika, int paikka_id, String aihe, String kuvaus,
+			int opettaja_id, String opettajanNimi) {
+		super();
+		this.koulutus_id = koulutus_id;
+		this.pvm = pvm;
+		this.alkamisaika = alkamisaika;
+		this.paattymisaika = paattymisaika;
+		this.paikka_id = paikka_id;
+		this.aihe = aihe;
+		this.kuvaus = kuvaus;
+		this.opettaja_id = opettaja_id;
+		this.opettajanNimi = opettajanNimi;
 	}
 
 
@@ -126,13 +143,27 @@ public class Koulutus {
 	}
 
 
+	public String getOpettajanNimi() {
+		return opettajanNimi;
+	}
+
+
+	public void setOpettajanNimi(String opettajanNimi) {
+		this.opettajanNimi = opettajanNimi;
+	}
+
+
 	@Override
 	public String toString() {
 		return "Koulutus [koulutus_id=" + koulutus_id + ", pvm=" + pvm
 				+ ", alkamisaika=" + alkamisaika + ", paattymisaika="
 				+ paattymisaika + ", paikka_id=" + paikka_id + ", aihe=" + aihe
-				+ ", kuvaus=" + kuvaus + ", opettaja=" + opettaja_id + "]";
+				+ ", kuvaus=" + kuvaus + ", opettaja_id=" + opettaja_id
+				+ ", opettajanNimi=" + opettajanNimi + "]";
 	}
+
+
+
 	
 	
 }

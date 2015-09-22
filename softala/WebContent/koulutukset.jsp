@@ -137,7 +137,7 @@
 						<td><c:out value="${koulutus.alkamisaika}"/></td>
 						<td><c:out value="${koulutus.paikka}"/></td>
 						<td>KOULUTTAJA </td>
-						<td><c:out value="${koulutus.opettaja}"/></td>
+						<td><c:out value="${koulutus.opettajanNimi}"/></td>
 						<td><c:out value="${koulutus.kuvaus}"/></td>
 					</tr>
 				</c:forEach>

@@ -47,8 +47,14 @@ public class KoulutusHakuDAO {
 			String kuvaus = (String) rivi.get("kuvaus");
 			int opettaja_id = Integer.parseInt((String) rivi.get("opettaja_id"));
 			System.out.println(opettaja_id);
+			
+			String opettajaEtunimi = (String) rivi.get("etunimi");
+			String opettajaSukunimi = (String) rivi.get("sukunimi");
+			String opettajanNimi = opettajaEtunimi+" "+opettajaSukunimi;
+			System.out.println("Opettajan nimi: "+opettajanNimi);
+			
 			Koulutus koulutus = new Koulutus(koulutus_id, pvm, alkamisaika,
-					paattymisaika, paikka_id, aihe, kuvaus, opettaja_id);
+					paattymisaika, paikka_id, aihe, kuvaus, opettaja_id, opettajanNimi);
 			koulutukset.add(koulutus);
 		}
 		return koulutukset;
