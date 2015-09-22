@@ -1,9 +1,15 @@
-
 body {
-	font-family: 'Roboto Condensed', sans-serif;
-	}
-.linkImg{
-	padding: 20px;
-	}
+	
+}
 
-  
+.linkImg {
+	padding: 20px;
+}
+
+.btn-lg.round {
+	border-radius: 10px;
+}
+
+.jumbotron{
+background-color: #EEFFEE;
+}

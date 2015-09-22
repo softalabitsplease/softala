@@ -23,8 +23,7 @@
 
 <title>Softala | Koulutukset</title>
 
-<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed'
-	rel='stylesheet' type='text/css'>
+
 
 
 
@@ -47,9 +46,10 @@
 
 <!-- Google fontit -->
 
-<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed'
-	rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="styles.css">
+
+<link rel="stylesheet" href="styles/styles.css">
+
+
 
 
 
@@ -75,6 +75,12 @@
 			</button>
 			<a class="navbar-brand" href="#">Koulutusjärjestelmä</a>
 		</div>
+		
+		  <div>
+      <ul class="nav navbar-nav">
+        <li><a href="etusivu.html">Etusivu</a></li>
+      </ul>
+    </div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<!-- Login -->
 			<!-- <form class="navbar-form navbar-right">
@@ -95,10 +101,7 @@
 		<div class="container">
 			<h1>Softala - Koulutukset</h1>
 			<p>Täältä löydät kaikki Softalan tulevat koulutukset...</p>
-			<p>
-				<a class="btn btn-primary" href="#" role="button">Lisätiedot
-					&raquo;</a>
-			</p>
+		
 		</div>
 	</div>
 
