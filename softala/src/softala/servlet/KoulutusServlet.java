@@ -84,7 +84,7 @@ public class KoulutusServlet extends HttpServlet {
 		throw new ServletException(e);
 	}*/
 	
-	response.sendRedirect("lomake");
+	response.sendRedirect("lomake.jsp");
 	}
 	
 
