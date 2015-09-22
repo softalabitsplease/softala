@@ -42,14 +42,15 @@ public class KoulutusServlet extends HttpServlet {
 		try {
 			hakuDao.avaaYhteys();
 			koulutukset = hakuDao.haeKoulutukset();
-		}  finally {
+		} finally {
 			hakuDao.suljeYhteys();
 		}
 		// requestiin talteen
 		request.setAttribute("koulutukset", koulutukset);
 
 		// jsp hoitaa muotoilun xdxd
-		request.getRequestDispatcher("koulutukset.jsp").forward(request, response);
+		request.getRequestDispatcher("koulutukset.jsp").forward(request,
+				response);
 
 	}
 
@@ -65,27 +66,28 @@ public class KoulutusServlet extends HttpServlet {
 		String paikka_id = request.getParameter("paikka_id");
 		String aihe = request.getParameter("aihe");
 		String apuopettaja = request.getParameter("opettaja_id");
-		System.out.println(aihe+alkamisaika+paattymisaika+paikka_id+apuopettaja);
+		System.out.println(aihe + alkamisaika + paattymisaika + paikka_id
+				+ apuopettaja);
 		KoulutusLisaysDAO kDao = new KoulutusLisaysDAO();
-		
+
 		try {
-			
-				int paikka_id2 = Integer.parseInt(paikka_id);
-				int opettaja_id = Integer.parseInt(apuopettaja);
-				kDao.avaaYhteys();
-				Koulutus koul = new Koulutus(alkamisaika, paattymisaika, paikka_id2, aihe, opettaja_id);
-				
-				kDao.LisaaKoulutus(koul);
-			
+
+			int paikka_id2 = Integer.parseInt(paikka_id);
+			int opettaja_id = Integer.parseInt(apuopettaja);
+			kDao.avaaYhteys();
+			Koulutus koul = new Koulutus(alkamisaika, paattymisaika,
+					paikka_id2, aihe, opettaja_id);
+
+			kDao.LisaaKoulutus(koul);
+
 		} finally {
 			kDao.suljeYhteys();
 		}
-	/*catch (Exception e) {
-		throw new ServletException(e);
-	}*/
-	
-	response.sendRedirect("lomake.jsp");
+		/*
+		 * catch (Exception e) { throw new ServletException(e); }
+		 */
+
+		response.sendRedirect("lomake.jsp");
 	}
-	
 
 }
