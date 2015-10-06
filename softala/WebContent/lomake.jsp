@@ -109,20 +109,99 @@
 	  %>
 	 	Koulutus lis‰tty!
 	  <%} %>
-	<form action="koulutukset" method="post">
-		<table>
+	  
+	  
+	
+		
+		
+		<form action="koulutukset" method="post" class="form-horizontal" role="form">
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="aihe">Aihe:</label>
+      <div class="col-sm-4">
+
+        <input type="text" name="aihe" class="form-control" placeholder="Syˆt‰ koulutuksen aihe" required>
+
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="alkamisaika">Alkamisaika:</label>
+      <div class="col-sm-4">          
+        <input type="datetime" name="alkamisaika" class="form-control" placeholder="Syˆt‰ koulutuksen alkamisaika" required>
+      </div>
+    </div>
+
+
+ <div class="form-group">
+      <label class="control-label col-sm-2" for="paattymisaika">P‰‰ttymisaika:</label>
+      <div class="col-sm-4">          
+        <input type="datetime" name="paattymisaika" class="form-control" placeholder="Syˆt‰ koulutuksen p‰‰ttymisaika" required>
+      </div>
+    </div>
+
+
+<div class="form-group">
+      <label class="control-label col-sm-2" for="paikka">Paikka:</label>
+      <div class="col-sm-4">          
+        <input type="text" name="paikka_id" class="form-control" placeholder="Syˆt‰ koulutuksen paikka" required>
+      </div>
+    </div>
+
+
+<div class="form-group">
+      <label class="control-label col-sm-2" for="opettaja">Opettaja:</label>
+      <div class="col-sm-4">          
+        <input type="text" name="opettaja_id" class="form-control" placeholder="Syˆt‰ koulutuksen opettaja" required>
+      </div>
+    </div>
+
+   
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Lis‰‰</button>
+      </div>
+    </div>
+
+  </form>
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 			<!--<tr>
 				<td>Kouluttaja</td>
 				<td><input type="text" name="kouluttaja"
 					placeholder="Syˆt‰ kouluttajan nimi" /></td>
 			</tr> -->
-			<br>
+			
+
+			
+			
+			<!--  <br>
 			<tr>
 				<td>Aihe</td>
 				<td><input type="text" name="aihe"
 					placeholder="Syˆt‰ koulutuksen aihe" required/></td>
 			</tr>
 			<br>
+			
+			
 			<tr>
 				<td>Alkamisaika</td>
 				<td><input type="datetime" name="alkamisaika"
@@ -151,13 +230,13 @@
 				<td>Kuvaus</td>
 				<td><input type="text" name="kuvaus"
 					placeholder="Syˆt‰ koulutuksen kuvaus" /></td>
-			</tr>-->
+			</tr>
 			<br>
 			<tr>
 				<td><button type="submit">Lis‰‰</button></td>
 			</tr>
-		</table>
-	</form>
+		</table> -->
+	
 	
 	
 	
