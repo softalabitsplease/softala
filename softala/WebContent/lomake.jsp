@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 
 
@@ -59,26 +59,26 @@
 <body>
 
 	<nav class="navbar navbar-inverse navbar-fixed-top">
-	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed"
-				data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-				aria-controls="navbar">
-				<span class="sr-only">Toggle navigation</span> <span
-					class="icon-bar"></span> <span class="icon-bar"></span> <span
-					class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">Koulutusj‰rjestelm‰</a>
-		</div>
-		
-		  <div>
-      <ul class="nav navbar-nav">
-        <li><a href="etusivu.html">Etusivu</a></li>
-      </ul>
-    </div>
-		<div id="navbar" class="navbar-collapse collapse">
-			<!-- Login -->
-			<!-- <form class="navbar-form navbar-right">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Koulutusj‰rjestelm‰</a>
+			</div>
+
+			<div>
+				<ul class="nav navbar-nav">
+					<li><a href="etusivu.html">Etusivu</a></li>
+				</ul>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<!-- Login -->
+				<!-- <form class="navbar-form navbar-right">
             <div class="form-group">
               <input type="text" placeholder="Email" class="form-control">
             </div>
@@ -87,113 +87,181 @@
             </div>
             <button type="submit" class="btn btn-success">Sign in</button>
           </form> -->
+			</div>
+			<!--/.navbar-collapse -->
 		</div>
-		<!--/.navbar-collapse -->
-	</div>
 	</nav>
 
 	<div id="jumbotroni" class="jumbotron">
 		<div class="container">
 			<h1>Softala - Lis‰‰ koulutus</h1>
 			<p>T‰‰ll‰ pystyt lis‰‰m‰‰n koulutuksia.</p>
-		
+
 		</div>
 	</div>
 
 
 	<div id="section1" class="container">
-	
-	<h1>Lis‰‰ koulutus</h1>
-	<% String lisatty = request.getParameter("lisatty");
-	  if(lisatty != null && lisatty.equals("true")){
-	  %>
-	 	Koulutus lis‰tty!
-	  <%} %>
-	  
-	  
-	
-		
-		
-		<form action="koulutukset" method="post" class="form-horizontal" role="form">
 
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="aihe">Aihe:</label>
-      <div class="col-sm-4">
-
-        <input type="text" name="aihe" class="form-control" placeholder="Syˆt‰ koulutuksen aihe" required>
-
-      </div>
-    </div>
+		<h1>Lis‰‰ koulutus</h1>
+		<%
+			String lisatty = request.getParameter("lisatty");
+			if (lisatty != null && lisatty.equals("true")) {
+		%>
+		Koulutus lis‰tty!
+		<%
+			}
+		%>
 
 
 
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="alkamisaika">Alkamisaika:</label>
-      <div class="col-sm-4">          
-        <input type="datetime" name="alkamisaika" class="form-control" placeholder="Syˆt‰ koulutuksen alkamisaika" required>
-      </div>
-    </div>
 
 
- <div class="form-group">
-      <label class="control-label col-sm-2" for="paattymisaika">P‰‰ttymisaika:</label>
-      <div class="col-sm-4">          
-        <input type="datetime" name="paattymisaika" class="form-control" placeholder="Syˆt‰ koulutuksen p‰‰ttymisaika" required>
-      </div>
-    </div>
+		<form action="koulutukset" method="post" class="form-horizontal"
+			role="form">
 
 
-<div class="form-group">
-      <label class="control-label col-sm-2" for="paikka">Paikka:</label>
-      <div class="col-sm-4">          
-        <input type="text" name="paikka_id" class="form-control" placeholder="Syˆt‰ koulutuksen paikka" required>
-      </div>
-    </div>
+
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="aihe">Aihe:</label>
+				<div class="col-sm-4">
+
+					<input type="text" name="aihe" class="form-control"
+						placeholder="Syˆt‰ koulutuksen aihe" required>
+
+				</div>
+			</div>
 
 
-<div class="form-group">
-      <label class="control-label col-sm-2" for="opettaja">Opettaja:</label>
-      <div class="col-sm-4">          
-        <input type="text" name="opettaja_id" class="form-control" placeholder="Syˆt‰ koulutuksen opettaja" required>
-      </div>
-    </div>
 
-   
-    <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Lis‰‰</button>
-      </div>
-    </div>
 
-  </form>
-		
+			<div class="form-group">
+				<label for="country" class="col-sm-2 control-label">Kouluttaja:</label>
+				<div class="col-sm-4">
+					<select id="country" class="form-control">
+						<option>Yksi</option>
+						<option>Kaksi</option>
+						<option>Kolme</option>
+						<option>Nelj‰</option>
+						<option>Viisi</option>
+					</select>
+				</div>
+			</div>
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-			<!--<tr>
+
+
+
+
+
+			<div class="form-group">
+				<label for="country" class="col-sm-2 control-label">Aika:</label>
+				<div class="col-sm-1">
+					<select id="aika" class="form-control">
+						<option>08</option>
+						<option>09</option>
+						<option>10</option>
+						<option>11</option>
+						<option>12</option>
+						<option>13</option>
+						<option>14</option>
+						<option>15</option>
+						<option>16</option>
+					</select>
+				</div>
+				<div class="col-sm-1">
+					<select id="aika" class="form-control">
+						<option>00</option>
+						<option>15</option>
+						<option>30</option>
+						<option>45</option>
+					</select>		
+				</div>
+
+			
+
+				<div class="col-sm-1">
+				
+					<select id="aika" class="form-control">
+						<option>00</option>
+						<option>15</option>
+						<option>30</option>
+						<option>45</option>
+					</select>
+				</div>
+
+				<div class="col-sm-1">
+					<select id="aika" class="form-control">
+						<option>00</option>
+						<option>15</option>
+						<option>30</option>
+						<option>45</option>
+					</select>
+				</div>
+
+			</div>
+
+
+
+
+
+			<div class="form-group">
+				<label for="country" class="col-sm-2 control-label">Paikka:</label>
+				<div class="col-sm-4">
+					<select id="paikka" class="form-control">
+						<option>h5009</option>
+						<option>h5008</option>
+						<option>h1001</option>
+						<option>h2400</option>
+						<option>h4007</option>
+					</select>
+				</div>
+			</div>
+
+
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="opettaja">Opettaja:</label>
+				<div class="col-sm-4">
+					<input type="text" name="opettaja_id" class="form-control"
+						placeholder="Syˆt‰ koulutuksen opettaja" required>
+				</div>
+			</div>
+
+
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-default">Lis‰‰</button>
+				</div>
+			</div>
+
+		</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- ALKUPERƒINEN FORMI -->
+
+		<!--<tr>
 				<td>Kouluttaja</td>
 				<td><input type="text" name="kouluttaja"
 					placeholder="Syˆt‰ kouluttajan nimi" /></td>
 			</tr> -->
-			
 
-			
-			
-			<!--  <br>
+
+
+
+		<!--  <br>
 			<tr>
 				<td>Aihe</td>
 				<td><input type="text" name="aihe"
@@ -236,14 +304,14 @@
 				<td><button type="submit">Lis‰‰</button></td>
 			</tr>
 		</table> -->
-	
-	
-	
-	
-<hr id="viiva">
+
+
+
+
+		<hr id="viiva">
 
 		<footer>
-		<p>&copy; Bits Please 2015</p>
+			<p>&copy; Bits Please 2015</p>
 		</footer>
 	</div>
 	<!-- /container -->
