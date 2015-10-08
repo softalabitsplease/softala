@@ -4,4 +4,6 @@ salasana: keFAiY25i
 
 /var/lib/tomcat8/webapps
 
+mysql -u username -p
+
 http://proto292:8080/softala/etusivu.html
