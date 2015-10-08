@@ -136,15 +136,10 @@
 
 
 			<div class="form-group">
-				<label for="country" class="col-sm-2 control-label">Kouluttaja:</label>
+				<label class="control-label col-sm-2" for="opettaja">Kouluttaja:</label>
 				<div class="col-sm-4">
-					<select id="country" class="form-control">
-						<option>Yksi</option>
-						<option>Kaksi</option>
-						<option>Kolme</option>
-						<option>Neljä</option>
-						<option>Viisi</option>
-					</select>
+					<input type="text" name="opettaja_id" class="form-control"
+						placeholder="Syötä koulutuksen opettaja" required>
 				</div>
 			</div>
 
@@ -182,10 +177,15 @@
 				<div class="col-sm-1">
 				
 					<select id="aika" class="form-control">
-						<option>00</option>
+						<option>08</option>
+						<option>09</option>
+						<option>10</option>
+						<option>11</option>
+						<option>12</option>
+						<option>13</option>
+						<option>14</option>
 						<option>15</option>
-						<option>30</option>
-						<option>45</option>
+						<option>16</option>
 					</select>
 				</div>
 
@@ -218,11 +218,32 @@
 			</div>
 
 
+		
+			
+			
+			
+			
 			<div class="form-group">
-				<label class="control-label col-sm-2" for="opettaja">Opettaja:</label>
+				<label for="country" class="col-sm-2 control-label">Opettaja:</label>
+				<div class="col-sm-4">
+					<select id="country" class="form-control">
+						<option>Yksi</option>
+						<option>Kaksi</option>
+						<option>Kolme</option>
+						<option>Neljä</option>
+						<option>Viisi</option>
+					</select>
+				</div>
+			</div>
+			
+			
+			
+			
+				<div class="form-group">
+				<label class="control-label col-sm-2" for="opettaja">Kuvaus:</label>
 				<div class="col-sm-4">
 					<input type="text" name="opettaja_id" class="form-control"
-						placeholder="Syötä koulutuksen opettaja" required>
+						placeholder="Syötä kuvaus" required>
 				</div>
 			</div>
 
