@@ -12,20 +12,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
 <!-- The above 3 meta tags must come first in the head; any other head content must come *after* these tags -->
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" href="../../favicon.ico">
 
-
-
-
 <title>Softala | Koulutukset</title>
-
-
-
-
 
 <!-- Latest compiled and minified CSS SS -->
 <link rel="stylesheet"
@@ -39,27 +31,13 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/yeti/bootstrap.min.css">
 
-
-<!-- Google fontit -->
-
-
+<!-- Tyylitiedosto -->
 <link rel="stylesheet" href="styles/styles.css">
 
-
-
-
-
 </head>
-
-
-
-
-
-
 
 <body>
 
@@ -107,13 +85,11 @@
 
 
 	<div id="section1" class="container">
-
-
-
-
-		<table class="table table-striped">
+	<form action="poistoServlet" method="post">
+		<table class="table" >
 			<thead>
 				<tr>
+					<th>Koulutus ID</th>
 					<th>Aihe</th>
 					<th>Aika</th>
 					<th>Paikka</th>
@@ -123,30 +99,21 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>Java</td>
-					<td>10:00</td>
-					<td>5009</td>
-					<td>Kalevi</td>
-					<td>Matti Laakso</td>
-					<td>Tämmöinen Java kurssi...</td>
-				</tr>
 				<c:forEach items="${koulutukset}" var="koulutus">
-					<tr>
+					<tr class="taulurow">
+						<td><c:out value="${koulutus.koulutus_id}"/></td>
 						<td><c:out value="${koulutus.aihe}"/></td>
-						<td><c:out value="${koulutus.alkamisaika}"/></td>
+						<td><c:out value="${koulutus.alkamisaika}"/> - <c:out value="${koulutus.paattymisaika}"/></td>
 						<td><c:out value="${koulutus.paikka}"/></td>
 						<td>KOULUTTAJA </td>
 						<td><c:out value="${koulutus.opettajanNimi}"/></td>
 						<td><c:out value="${koulutus.kuvaus}"/></td>
+						<td>&nbsp;<td><button type="submit" value="${koulutus.koulutus_id}" name="poistaKoulutusId">Poista</button></td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
-
-
-
-
+	</form>
 		<hr id="viiva">
 
 		<footer>
@@ -162,6 +129,7 @@
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="../../dist/js/bootstrap.min.js"></script>
+	<script src="scripti.js"></script>
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>

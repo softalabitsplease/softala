@@ -1,5 +1,7 @@
 package dao;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.ArrayList;
 
 import bean.Koulutus;
@@ -49,7 +51,7 @@ public class KoulutusLisaysDAO {
 			System.out.println(koulutus_id);
 		} catch (Exception e) {
 			// TODO: handle exception
-			System.out.println("VIRHE TIEDON LISÄYKSESSÄ");
+			System.out.println("VIRHE TIEDON LISï¿½YKSESSï¿½");
 		}
 		try {
 			int kouluttaja_id = 1;
@@ -64,9 +66,35 @@ public class KoulutusLisaysDAO {
 			System.out.println(koulutus_id);
 
 		} catch (Exception e) {
-			System.out.println("VIRHE TIEDON LISÄYKSESSÄ");
+			System.out.println("VIRHE TIEDON LISï¿½YKSESSï¿½");
 		}
 
+	}
+	
+	public void poista(int poistaKoulutusId) throws Exception {
+
+		Yhteys yhteys = new Yhteys();
+		yhteys.getYhteys();
+		Connection spabel = yhteys.getYhteys();
+
+
+		try {
+			String sql = "DELETE FROM Koulutus WHERE koulutus_id=?";
+			PreparedStatement lause = spabel.prepareStatement(sql);
+			// tÃ¤ytetÃ¤Ã¤n puuttuvat tiedot
+			lause.setInt(1, poistaKoulutusId);
+
+			// suoritetaan lause
+			lause.executeUpdate();
+			System.out.println("HENKILÃ– POISTETTIIN TIETOKANNASTA");
+		} catch (Exception e) {
+			// JOTAIN VIRHETTÃ„ TAPAHTUI
+			throw new Exception("HenkilÃ¶n poistamisyritys aiheutti virheen", e);
+		} finally {
+			// LOPULTA AINA SULJETAAN YHTEYS
+			System.out.println("Katkaistaan poistoyhteys");
+			yhteys.katkaise();
+		}
 	}
 
 }
