@@ -39,7 +39,14 @@ h1 {
 
 .navbar-brand {
 	font-size: 23px;
+}
+
+.navbar-inverse .navbar-brand {
 	color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
 }
 
 .navbar-nav {

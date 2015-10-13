@@ -75,9 +75,9 @@
 			<div>
 				<ul class="nav navbar-nav">
 					<li><a href="etusivu.html">Etusivu</a></li>
-					 <li><a href="koulutukset"><b>Koulutukset</b></a></li>
-        			<li><a href="lomake.jsp"><b>Lis‰‰ koulutus</b></a></li>
-        			<li><a href=><b>Hallinnointi</b></a></li>
+					 <li><a href="koulutukset">Koulutukset</a></li>
+        			<li><a href="lomake.jsp">Lis‰‰ koulutus</a></li>
+        			<li><a href=>Hallinnointi</a></li>
 				</ul>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
