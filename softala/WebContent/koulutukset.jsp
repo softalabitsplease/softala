@@ -64,6 +64,26 @@
 <!-- Tyylitiedosto -->
 <link rel="stylesheet" href="styles/styles.css">
 
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#playNappula').click(function(){
+		function moveRows(){
+		     		firstTR = $('tbody tr').first();
+		       		firstTR.animate({opacity:0},
+		          		function(){$('tbody').append(firstTR);});
+		        		firstTR.animate({opacity:1});
+		    	}
+		    	setInterval(function(){
+		        		moveRows();
+		    	},3000);
+	    
+	    });
+});
+</script>
+
 </head>
 
 <body>
@@ -145,7 +165,7 @@
 		</table>
 	</form>
 		<hr id="viiva">
-
+		<button type="button" id="playNappula">Scroll</button>
 		<footer>
 		<p>&copy; Bits Please 2015</p>
 		</footer>
