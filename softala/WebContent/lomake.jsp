@@ -50,7 +50,6 @@
 
 <link rel="stylesheet" href="styles/styles.css">
 
-
 </head>
 
 
@@ -154,16 +153,13 @@
 			</div>
 
 
-			<div class="form-group">
-				<label class="control-label col-sm-2" for="pvm">P‰iv‰m‰‰r‰:</label>
-				<div class="col-sm-4">
-
+            <div class="form-group">
+            	<label class="control-label col-sm-2" for="pvm">P‰iv‰m‰‰r‰:</label>
+            	<div class="col-sm-4">
 					<input type="text" name="pvm" class="form-control"
 						placeholder="Syˆt‰ koulutuksen p‰iv‰m‰‰r‰" required>
-
 				</div>
-			</div>
-
+            </div>
 
 
 			<div class="form-group">
