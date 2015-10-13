@@ -2,66 +2,42 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
-
-
 <html>
 <head>
-
 <!--  <meta charset="ISO-8859-1"> -->
-
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 
 <!-- The above 3 meta tags must come first in the head; any other head content must come *after* these tags -->
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" href="../../favicon.ico">
 
-
-
-
 <title>Softala | Koulutukset</title>
 
-
-
-
-
-<!-- Latest compiled and minified CSS SS -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
+<!-- Latest compiled and minified CSS -->
+<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <!-- Optional theme -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./bootstrap/css/bootstrap-theme.min.css">
+<!-- Datepicker CSS -->
+<link href="./datepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 
-<!-- Latest compiled and minified JavaScript -->
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-
-<!-- <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/yeti/bootstrap.min.css"> -->
-
-
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/yeti/bootstrap.min.css"> -->
 <!-- Google fontit -->
 <link href='https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro:300|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-
-
+<!-- Custom CSS -->
 <link rel="stylesheet" href="styles/styles.css">
 
+<!-- jQuery -->
+<script type="text/javascript" src="./jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
 <!-- Datepicker -->
-<script type="text/javascript" src="./js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-<script type="text/javascript" src="./js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./datepicker/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./datepicker/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
 
 </head>
-
-
-
-
-
 <body>
-
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -158,12 +134,13 @@
 
 
             <div class="form-group">
-            	<label class="control-label col-sm-2" for="pvm">Päivämäärä:</label>
-                <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+            	<label for="pvm" class="col-sm-2 control-label">Päivämäärä:</label>
+                <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="pvm" data-link-format="yyyy-mm-dd">
                     <input class="form-control" size="16" type="text" value="" readonly>
                     <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
 					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                 </div>
+                <input type="hidden" id="pvm" value="" /><br/>
             </div>
 
 
@@ -360,23 +337,14 @@
 
 	<!-- Bootstrap core JavaScript
     ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
+	<!-- Placed at the end of the document so the pages load faster
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="../../dist/js/bootstrap.min.js"></script>
+	<script src="../../dist/js/bootstrap.min.js"></script> -->
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+	<!-- Datepicker -->
 	<script type="text/javascript">
-    $('.form_datetime').datetimepicker({
-        //language:  'fr',
-        weekStart: 1,
-        todayBtn:  1,
-		autoclose: 1,
-		todayHighlight: 1,
-		startView: 2,
-		forceParse: 0,
-        showMeridian: 1
-    });
 	$('.form_date').datetimepicker({
         language:  'fr',
         weekStart: 1,
@@ -385,17 +353,6 @@
 		todayHighlight: 1,
 		startView: 2,
 		minView: 2,
-		forceParse: 0
-    });
-	$('.form_time').datetimepicker({
-        language:  'fr',
-        weekStart: 1,
-        todayBtn:  1,
-		autoclose: 1,
-		todayHighlight: 1,
-		startView: 1,
-		minView: 0,
-		maxView: 1,
 		forceParse: 0
     });
 	</script>	
