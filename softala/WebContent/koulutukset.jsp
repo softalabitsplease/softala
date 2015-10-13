@@ -78,14 +78,17 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Koulutusj‰rjestelm‰</a>
-		</div>
-		
-		  <div>
-      <ul class="nav navbar-nav">
-        <li><a href="etusivu.html">Etusivu</a></li>
-      </ul>
-    </div>
+		<a class="navbar-brand" href="etusivu.html">Koulutusj‰rjestelm‰</a>
+			</div>
+
+			<div>
+				<ul class="nav navbar-nav">
+					<li><a href="etusivu.html">Etusivu</a></li>
+					 <li><a href="koulutukset"><b>Koulutukset</b></a></li>
+        			<li><a href="lomake.jsp"><b>Lis‰‰ koulutus</b></a></li>
+        			<li><a href=><b>Hallinnointi</b></a></li>
+				</ul>
+			</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<!-- Login -->
 			<!-- <form class="navbar-form navbar-right">

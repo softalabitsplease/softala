@@ -38,5 +38,10 @@ h1 {
 }
 
 .navbar-brand {
-	font-size: 20px;
+	font-size: 23px;
+	color: white;
+}
+
+.navbar-nav {
+	font-size: 17px;
 }
