@@ -135,8 +135,8 @@
 
             <div class="form-group">
             	<label for="pvm" class="col-sm-2 control-label">P‰iv‰m‰‰r‰:</label>
-                <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="pvm" data-link-format="yyyy-mm-dd">
-                    <input class="form-control" size="16" type="text" value="" readonly>
+                <div class="input-group date form_date col-sm-4" data-date="" data-date-format="dd MM yyyy" data-link-field="pvm" data-link-format="yyyy-mm-dd">
+                    <input class="form-control" type="text" value="" readonly>
                     <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
 					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                 </div>
@@ -346,7 +346,7 @@
 	<!-- Datepicker -->
 	<script type="text/javascript">
 	$('.form_date').datetimepicker({
-        language:  'fr',
+        language:  'fi',
         weekStart: 1,
         todayBtn:  1,
 		autoclose: 1,
