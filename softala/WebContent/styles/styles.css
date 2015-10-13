@@ -49,6 +49,10 @@ h1 {
     color: white;
 }
 
+ul.nav li.active a {
+	color: grey;
+}
+
 .navbar-nav {
 	font-size: 17px;
 }

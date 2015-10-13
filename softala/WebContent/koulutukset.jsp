@@ -84,7 +84,7 @@
 			<div>
 				<ul class="nav navbar-nav">
 					<li><a href="etusivu.html">Etusivu</a></li>
-					 <li><a href="koulutukset">Koulutukset</a></li>
+					 <li class="active"><a href="koulutukset">Koulutukset</a></li>
         			<li><a href="lomake.jsp">Lis‰‰ koulutus</a></li>
         			<li><a href=>Hallinnointi</a></li>
 				</ul>
