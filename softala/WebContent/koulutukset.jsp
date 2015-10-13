@@ -1,3 +1,29 @@
+<a class="navbar-brand" href="etusivu.html"><b>Koulutusj‰rjestelm‰</b></a>
+
+			</div>
+			
+			<div>
+      <ul class="nav navbar-nav">
+        <li><a href="etusivu.html"><b>Etusivu</b></a></li>
+        <li><a href="koulutukset.jsp"><b>Koulutukset</b></a></li>
+        <li><a href="lomake.jsp"><b>Lis‰‰ koulutus</b></a></li>
+        <li><a href="lol dunno"><b>Hallinnointi</b></a></li>
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -30,32 +56,13 @@
 <!-- Latest compiled and minified JavaScript -->
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+	<!-- Google fontit -->
 
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/yeti/bootstrap.min.css">
+ <link href='https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro:300|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 
 <!-- Tyylitiedosto -->
 <link rel="stylesheet" href="styles/styles.css">
-
-<!-- jQuery -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-	$('#playNappula').click(function(){
-		function moveRows(){
-		     		firstTR = $('tbody tr').first();
-		       		firstTR.animate({opacity:0},
-		          		function(){$('tbody').append(firstTR);});
-		        		firstTR.animate({opacity:1});
-		    	}
-		    	setInterval(function(){
-		        		moveRows();
-		    	},3000);
-	    
-	    });
-});
-</script>
 
 </head>
 
@@ -135,7 +142,7 @@ $(document).ready(function(){
 		</table>
 	</form>
 		<hr id="viiva">
-		<button type="button" id="playNappula">Scroll</button>
+
 		<footer>
 		<p>&copy; Bits Please 2015</p>
 		</footer>

@@ -40,11 +40,12 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/yeti/bootstrap.min.css">
+<!-- <link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/yeti/bootstrap.min.css"> -->
 
 
 <!-- Google fontit -->
+<link href='https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro:300|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 
 
 <link rel="stylesheet" href="styles/styles.css">
@@ -94,6 +95,7 @@
 
 	<div id="jumbotroni" class="jumbotron">
 		<div class="container">
+		
 			<h1>Softala - Lis‰‰ koulutus</h1>
 			<p>T‰‰ll‰ pystyt lis‰‰m‰‰n koulutuksia.</p>
 
@@ -136,10 +138,15 @@
 
 
 			<div class="form-group">
-				<label class="control-label col-sm-2" for="opettaja">Kouluttaja:</label>
+				<label for="kouluttaja" class="col-sm-2 control-label">Kouluttaja:</label>
 				<div class="col-sm-4">
-					<input type="text" name="opettaja_id" class="form-control"
-						placeholder="Syˆt‰ koulutuksen opettaja" required>
+					<select id="country" class="form-control">
+						<option>Yksi</option>
+						<option>Kaksi</option>
+						<option>Kolme</option>
+						<option>Nelj‰</option>
+						<option>Viisi</option>
+					</select>
 				</div>
 			</div>
 
@@ -149,7 +156,7 @@
 
 
 			<div class="form-group">
-				<label for="country" class="col-sm-2 control-label">Aika:</label>
+				<label for="aika" class="col-sm-2 control-label">Aika:</label>
 				<div class="col-sm-1">
 					<select id="aika" class="form-control">
 						<option>08</option>
@@ -169,7 +176,8 @@
 						<option>15</option>
 						<option>30</option>
 						<option>45</option>
-					</select>		
+					</select>	
+						
 				</div>
 
 			
@@ -205,7 +213,7 @@
 
 
 			<div class="form-group">
-				<label for="country" class="col-sm-2 control-label">Paikka:</label>
+				<label for="paikka" class="col-sm-2 control-label">Paikka:</label>
 				<div class="col-sm-4">
 					<select id="paikka" class="form-control">
 						<option>h5009</option>
@@ -224,7 +232,7 @@
 			
 			
 			<div class="form-group">
-				<label for="country" class="col-sm-2 control-label">Opettaja:</label>
+				<label for="opettaja" class="col-sm-2 control-label">Opettaja:</label>
 				<div class="col-sm-4">
 					<select id="country" class="form-control">
 						<option>Yksi</option>

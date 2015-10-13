@@ -1,5 +1,6 @@
 body {
 	
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 .linkImg {
@@ -12,6 +13,7 @@ body {
 
 .jumbotron{
 background-color: #EEFFEE;
+padding-bottom: 70px;
 }
 
 
@@ -29,4 +31,12 @@ background-color: #EEFFEE;
 
 th {
 	text-align: left;
+}
+
+h1 {
+	padding-top: 30px;
+}
+
+.navbar-brand {
+	font-size: 20px;
 }
